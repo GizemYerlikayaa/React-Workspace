@@ -5,8 +5,8 @@ import Login from "./Login";
 import { users } from "./Login";
 
 function App() {
-  console.log(users);
   return (
+    // Fragment <> </>
     <div>
       <Login />
     </div>
