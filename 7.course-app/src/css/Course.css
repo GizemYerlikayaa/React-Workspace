@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #e9d044d5;
+}
+
+.course-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 40px 20px;
+}
+
+/* Tek bir kurs kartı */
+.course {
+  width: 250px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.course:hover {
+  transform: scale(1.03);
+}
+
+/* Kart içeriği */
+.course img {
+  width: 100%;
+  height: 250px;
+  border-bottom: 1px solid #ddd;
+}
+
+.course h4 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px;
+}
+
+.course h5 {
+  font-size: 14px;
+  color: #666;
+  margin: 10px;
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.course h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 10px;
+  text-align: center;
+}
+
+/* Link butonu */
+.course a {
+  display: inline-block;
+  margin: 10px;
+  margin-left: 20px;
+  padding: 10px 14px;
+  background-color: #bd0f2c;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.course a:hover {
+  background-color: #bd0f2cc4;
+}

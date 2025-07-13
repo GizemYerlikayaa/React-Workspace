@@ -15,7 +15,7 @@ export const courses = [
   },
   {
     id: 2345,
-    title: "Git Eğitimi",
+    title: "Git - Github Kullanım Eğitimi",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium maxime autem illo consequuntur blanditiis sint repellat, libero cumque expedita vero?",
     price: 350,

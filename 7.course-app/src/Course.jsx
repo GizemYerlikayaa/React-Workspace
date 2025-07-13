@@ -1,7 +1,7 @@
 import React from "react";
 
-function Course({ props }) {
-  const { id, title, description, price, link, image } = props;
+function Course({ course }) {
+  const { id, title, description, price, link, image } = course;
   return (
     <div className="course">
       <div>
@@ -9,7 +9,7 @@ function Course({ props }) {
         <h4>{title}</h4>
         <h5>{description}</h5>
         <h3>{price}</h3>
-        <a href={link} target="blank">
+        <a href={link} target="_blank" rel="noopener noreferrer">
           Satın Almak İçin Tıklayınız
         </a>
       </div>
