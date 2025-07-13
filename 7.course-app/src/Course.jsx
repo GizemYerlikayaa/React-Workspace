@@ -8,7 +8,7 @@ function Course({ course }) {
         <img src={image} alt="" />
         <h4>{title}</h4>
         <h5>{description}</h5>
-        <h3>{price}</h3>
+        <h3>{price} ₺</h3>
         <a href={link} target="_blank" rel="noopener noreferrer">
           Satın Almak İçin Tıklayınız
         </a>
