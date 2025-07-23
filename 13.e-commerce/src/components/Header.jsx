@@ -3,9 +3,11 @@ import "../css/Header.css";
 import { FaShoppingBasket } from "react-icons/fa";
 import { FaRegSun } from "react-icons/fa6";
 import { FaRegMoon } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [theme, setTheme] = useState(true);
+  const navigate = useNavigate();
   const changeTheme = () => {
     const root = document.getElementById("root");
 
@@ -27,7 +29,7 @@ function Header() {
         justifyContent: "space-between",
       }}
     >
-      <div className="flex-row">
+      <div className="flex-row" onClick={() => navigate("/")}>
         <img className="logo" src="./src/images/e.png" alt="" />
         <p className="logo-title">Fashion</p>
       </div>
