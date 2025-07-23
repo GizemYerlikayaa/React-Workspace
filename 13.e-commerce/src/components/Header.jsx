@@ -4,10 +4,19 @@ import { FaShoppingBasket } from "react-icons/fa";
 import { FaRegSun } from "react-icons/fa6";
 import { FaRegMoon } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Badge from "@mui/material/Badge";
+import { useSelector } from "react-redux";
+import { setDrawer } from "../redux/slices/basketSlices";
+import { useDispatch } from "react-redux";
 
 function Header() {
   const [theme, setTheme] = useState(true);
+
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const { products } = useSelector((store) => store.basket);
+
   const changeTheme = () => {
     const root = document.getElementById("root");
 
@@ -42,12 +51,21 @@ function Header() {
           placeholder="Ara.."
         />
         <div>
-          <FaShoppingBasket className="icon-sepet" />
           {theme ? (
             <FaRegSun className="icon" onClick={changeTheme} />
           ) : (
             <FaRegMoon className="icon" onClick={changeTheme} />
           )}
+          <Badge
+            onClick={() => dispatch(setDrawer())}
+            badgeContent={products.length}
+            color="warning"
+          >
+            <FaShoppingBasket
+              style={{ marginRight: "5px", marginTop: "-15px" }}
+              className="icon-sepet"
+            />
+          </Badge>
         </div>
       </div>
     </div>
