@@ -40,3 +40,7 @@ input {
   border-radius: 5px;
   cursor: pointer;
 }
+.inputError {
+  font-size: 15px;
+  color: rgb(158, 54, 89);
+}

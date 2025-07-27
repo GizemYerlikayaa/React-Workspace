@@ -1,7 +1,15 @@
 import React from "react";
 import { useFormik } from "formik";
+import { RegisterFormSchemas } from "../schemas/RegisterFormSchemas";
 
 function RegisterForm() {
+  const submit = (values, action) => {
+    setTimeout(() => {
+      // Sanki veritabanına gitti ve kullanıcıyı kaydetti gibi bir izlenim sunmak için bu kodu ekledim.
+      action.resetForm();
+    }, 2000);
+  };
+
   const { values, errors, handleChange, handleSubmit } = useFormik({
     initialValues: {
       email: "",
@@ -10,11 +18,13 @@ function RegisterForm() {
       confirmPassword: "",
       term: "",
     },
+    validationSchema: RegisterFormSchemas,
+    onSubmit: submit,
   });
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="inputDiv">
           <label>Email</label>
           <input
@@ -24,6 +34,7 @@ function RegisterForm() {
             value={values.email}
             onChange={handleChange}
           />
+          {errors.email && <p className="inputError">{errors.email}</p>}
         </div>
         <div className="inputDiv">
           <label>Yaş</label>
@@ -34,6 +45,7 @@ function RegisterForm() {
             value={values.age}
             onChange={handleChange}
           />
+          {errors.age && <p className="inputError">{errors.age}</p>}
         </div>
         <div className="inputDiv">
           <label>Şifre</label>
@@ -44,6 +56,7 @@ function RegisterForm() {
             value={values.password}
             onChange={handleChange}
           />
+          {errors.password && <p className="inputError">{errors.password}</p>}
         </div>
         <div className="inputDiv">
           <label>Şifre Tekrarı</label>
@@ -54,6 +67,9 @@ function RegisterForm() {
             value={values.confirmPassword}
             onChange={handleChange}
           />
+          {errors.confirmPassword && (
+            <p className="inputError">{errors.confirmPassword}</p>
+          )}
         </div>
         <div className="inputDiv">
           <div
@@ -75,8 +91,11 @@ function RegisterForm() {
               Kullanıcı Sözleşmesini Kabul Ediyorum
             </label>
           </div>
+          {errors.term && <p className="inputError">{errors.term}</p>}
         </div>
-        <button className="saveButton">Kaydet</button>
+        <button type="submit" className="saveButton">
+          Kaydet
+        </button>
       </form>
     </div>
   );
