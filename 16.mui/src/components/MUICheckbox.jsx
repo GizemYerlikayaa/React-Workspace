@@ -13,7 +13,7 @@ function MUICheckbox() {
     if (!isConfirm) {
       alert("Sözleşmeyi onaylayınız");
     } else {
-      alert(" İşlem Başarılı şekilde tamamlandı");
+      alert(" İşlem başarılı şekilde tamamlandı");
     }
   };
   return (
