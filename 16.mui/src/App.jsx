@@ -6,6 +6,7 @@ import MUISelect from "./components/MUISelect";
 import MUICheckbox from "./components/MUICheckbox";
 import MUIAutoComplete from "./components/MUIAutoComplete";
 import MUIBox from "./components/MUIBox";
+import MUIStack from "./components/MUIStack";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <MUISelect /> */}
       {/* <MUICheckbox /> */}
       {/* <MUIAutoComplete /> */}
-      <MUIBox />
+      {/* <MUIBox /> */}
+      <MUIStack />
     </div>
   );
 }
