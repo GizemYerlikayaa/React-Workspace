@@ -14,6 +14,7 @@ import MUIAppbar from "./components/MUIAppbar";
 import MUIImagesList from "./components/MUIImagesList";
 import MUIDrawer from "./components/MUIDrawer";
 import MUIBadge from "./components/MUIBadge";
+import MUIAvatar from "./components/MUIAvatar";
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
       {/* <MUIAppbar /> */}
       {/* <MUIImagesList /> */}
       {/* <MUIDrawer /> */}
-      <MUIBadge />
+      {/* <MUIBadge /> */}
+      <MUIAvatar />
     </div>
   );
 }
