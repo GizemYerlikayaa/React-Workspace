@@ -12,6 +12,7 @@ import MUICard from "./components/MUICard";
 import MUIAccordion from "./components/MUIAccordion";
 import MUIAppbar from "./components/MUIAppbar";
 import MUIImagesList from "./components/MUIImagesList";
+import MUIDrawer from "./components/MUIDrawer";
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
       {/* <MUICard /> */}
       {/* <MUIAccordion /> */}
       {/* <MUIAppbar /> */}
-      <MUIImagesList />
+      {/* <MUIImagesList /> */}
+      <MUIDrawer />
     </div>
   );
 }
